@@ -18,7 +18,8 @@ layout: null
 <meta property="og:title" content="EVOODESSA — стримы, видео и новости">
 <meta property="og:description" content="Официальный сайт EVOODESSA. Стримы, видео и новости игрового сообщества.">
 <meta property="og:url" content="{{ canonical_base }}/">
-<meta property="og:image" content="{{ canonical_base }}/assets/banner.png">
+{% assign social_banner = site.data.content.banner_image | default: '/assets/banner.png' | remove_first: '/' %}
+<meta property="og:image" content="{{ social_banner | absolute_url }}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
@@ -36,7 +37,8 @@ layout: null
 <main id="top">
 <h1 class="sr-only">EVOODESSA — стримы, игровые новости и видео</h1>
 <section class="banner-frame" aria-label="Баннер EVOODESSA">
-  <div class="banner" role="img" aria-label="EVOODESSA: реалистичный боец, корона и ночной город"></div>
+  {% assign site_banner = site.data.content.banner_image | default: '/assets/banner.png' | remove_first: '/' %}
+  <div class="banner" role="img" aria-label="EVOODESSA — баннер сайта" style="background-image: url('{{ site_banner | relative_url | escape }}')"></div>
 </section>
 <section class="quick-links" aria-label="Площадки EVOODESSA">
   <a href="https://www.youtube.com/@evo_odessa" target="_blank" rel="noopener noreferrer"><span class="platform-icon platform-y">▶</span><span><b>YouTube</b><small>@evo_odessa</small></span><i>↗</i></a>
