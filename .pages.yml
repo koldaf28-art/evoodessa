@@ -1,0 +1,103 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories: [image]
+content:
+  - name: news
+    label: "Новости и посты"
+    type: file
+    path: _data/posts.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: "Название поста"
+        type: string
+        required: true
+        options:
+          maxlength: 120
+      - name: date
+        label: "Дата публикации"
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: published
+        label: "Опубликовать пост на сайте"
+        type: boolean
+      - name: image
+        label: "Картинка поста"
+        type: image
+      - name: body
+        label: "Текст поста"
+        type: rich-text
+        options:
+          format: markdown
+  - name: homepage
+    label: "Настройки сайта: баннер, эфир и анонсы"
+    type: file
+    path: _data/content.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: banner_image
+        label: "Главный баннер сайта"
+        type: image
+        required: true
+        options:
+          extensions: [png, jpg, jpeg, webp]
+          path: assets/uploads
+      - name: stream_status
+        label: "Статус эфира"
+        type: select
+        options:
+          values:
+            - name: link
+              label: "Ссылка на эфир"
+            - name: live
+              label: "Сейчас в эфире (вручную)"
+            - name: scheduled
+              label: "Скоро эфир"
+      - name: stream_title
+        label: "Заголовок эфира"
+        type: string
+      - name: stream_url
+        label: "Ссылка на эфир"
+        type: string
+      - name: schedule
+        label: "Текст следующего эфира"
+        type: text
+      - name: announcement_title
+        label: "Название анонса"
+        type: string
+      - name: announcement_description
+        label: "Описание анонса"
+        type: text
+      - name: announcement_url
+        label: "Ссылка с анонса"
+        type: string
+      - name: announcement_image
+        label: "Фотография анонса"
+        type: image
+      - name: videos
+        label: "Три видео YouTube"
+        type: object
+        list:
+          min: 3
+          max: 3
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: id
+            label: "ID видео (11 символов из YouTube-ссылки)"
+            type: string
+            required: true
+          - name: title
+            label: "Название видео"
+
+            type: string
