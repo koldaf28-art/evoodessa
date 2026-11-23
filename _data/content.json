@@ -1,0 +1,24 @@
+{
+  "stream_status": "link",
+  "stream_title": "Пробую новую GTA | GTA 6",
+  "stream_url": "https://www.youtube.com/live/P-2mhJjh3DU",
+  "schedule": "Дата следующего эфира пока не объявлена. Анонсы появятся здесь и в Telegram.",
+  "announcement_title": "Пробую новую GTA 6",
+  "announcement_description": "Новости, прохождения и впечатления от игры.",
+  "announcement_url": "https://www.youtube.com/live/P-2mhJjh3DU",
+  "announcement_image": "/assets/gta6.jpg",
+  "videos": [
+    {
+      "id": "8y9Wxnox22k",
+      "title": "Видео 1 · EVOODESSA"
+    },
+    {
+      "id": "JHEWZjPIxas",
+      "title": "Видео 2 · EVOODESSA"
+    },
+    {
+      "id": "Y1_P2MCj23Y",
+      "title": "Видео 3 · EVOODESSA"
+    }
+  ]
+}
