@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{% assign base = site.github.url | default: site.url %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ base }}/</loc>
+    <lastmod>{{ 'now' | date: '%Y-%m-%d' }}</lastmod>
+  </url>
+</urlset>

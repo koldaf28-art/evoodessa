@@ -1,0 +1,13 @@
+title: "EVOODESSA — игровой канал, стримы и новости"
+description: "Официальный сайт EVOODESSA: стримы, видео и игровые новости"
+lang: ru
+# Репозиторий должен называться evoodessa: https://USERNAME.github.io/evoodessa/
+# Для отдельного домена позже заменить baseurl на пустую строку.
+baseurl: "/evoodessa"
+# Адрес домена GitHub Pages определяется при публикации.
+url: ""
+markdown: kramdown
+exclude:
+  - README.md
+  - DEPLOY_GUIDE.txt
+  - .pages.yml

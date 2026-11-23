@@ -1,0 +1,145 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090c">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="description" content="EVOODESSA — официальный сайт игрового канала. Стримы, видео, игровые новости, анонсы и сообщество.">
+<title>EVOODESSA — игровой канал, стримы, видео и новости</title>
+{% assign canonical_base = site.github.url | default: site.url %}
+<link rel="canonical" href="{{ canonical_base }}/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="EVOODESSA">
+<meta property="og:title" content="EVOODESSA — стримы, видео и новости">
+<meta property="og:description" content="Официальный сайт EVOODESSA. Стримы, видео и новости игрового сообщества.">
+<meta property="og:url" content="{{ canonical_base }}/">
+<meta property="og:image" content="{{ canonical_base }}/assets/banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+  <a href="#top" class="wordmark" aria-label="EVOODESSA — главная"><span class="mini-crown">♛</span> EVO<span>ODESSA</span></a>
+  <span class="topbar-kicker">ОФИЦИАЛЬНОЕ ПРОСТРАНСТВО СТРИМЕРА</span>
+  <div class="topbar-actions">
+    <a class="top-news" href="#news">НОВОСТИ</a>
+    <a class="top-support" href="https://boosty.to/evo_odessa" target="_blank" rel="noopener noreferrer">ПОДДЕРЖАТЬ <span>↗</span></a>
+  </div>
+</header>
+<main id="top">
+<h1 class="sr-only">EVOODESSA — стримы, игровые новости и видео</h1>
+<section class="banner-frame" aria-label="Баннер EVOODESSA">
+  <div class="banner" role="img" aria-label="EVOODESSA: реалистичный боец, корона и ночной город"></div>
+</section>
+<section class="quick-links" aria-label="Площадки EVOODESSA">
+  <a href="https://www.youtube.com/@evo_odessa" target="_blank" rel="noopener noreferrer"><span class="platform-icon platform-y">▶</span><span><b>YouTube</b><small>@evo_odessa</small></span><i>↗</i></a>
+  <a href="https://www.twitch.tv/evoodessa" target="_blank" rel="noopener noreferrer"><span class="platform-icon platform-t">◧</span><span><b>Twitch</b><small>evoodessa</small></span><i>↗</i></a>
+  <a href="https://t.me/Evo_Odessa" target="_blank" rel="noopener noreferrer"><span class="platform-icon platform-g">➤</span><span><b>Telegram</b><small>@Evo_Odessa</small></span><i>↗</i></a>
+  <a href="https://discord.gg/EZzkDu" target="_blank" rel="noopener noreferrer"><span class="platform-icon platform-d">✥</span><span><b>Discord</b><small>Сообщество</small></span><i>↗</i></a>
+  <a href="https://boosty.to/evo_odessa" target="_blank" rel="noopener noreferrer"><span class="platform-icon platform-b">ϟ</span><span><b>Boosty</b><small>Поддержать</small></span><i>↗</i></a>
+</section>
+
+<div class="intro-line"><span class="kicker">EVOODESSA / 01</span><span>ИГРЫ · СТРИМЫ · ВИДЕО</span></div>
+<section class="spotlight-layout">
+  <article class="live-panel" id="stream">
+    <div class="section-mini"><span class="redline"></span>В ЦЕНТРЕ СОБЫТИЙ</div>
+    <div class="stream-top">
+      <span class="status-chip{% if site.data.content.stream_status == 'live' %} live{% endif %}">
+      {% case site.data.content.stream_status %}{% when 'live' %}🔴 Сейчас в эфире{% when 'scheduled' %}Следующий стрим{% else %}Ссылка на эфир{% endcase %}
+      </span>
+      <span class="broadcast-symbol">◉</span>
+    </div>
+    <h2 class="stream-title">Эфир EVOODESSA</h2>
+    <p>{{ site.data.content.stream_title | escape }}</p>
+    <a class="cta" href="{{ site.data.content.stream_url | escape }}" target="_blank" rel="noopener noreferrer">СМОТРЕТЬ ТРАНСЛЯЦИЮ <span>↗</span></a>
+    <span class="panel-foot">ВИДЕО · ОБЩЕНИЕ · ПРЯМЫЕ ЭФИРЫ</span>
+  </article>
+  <article class="announce-panel" id="announcement">
+    {% assign annimage = site.data.content.announcement_image | remove_first: '/' %}
+    <div class="announce-poster" role="img" aria-label="Анонс EVOODESSA" style="background-image:url('{{ annimage | relative_url }}')"></div>
+    <div class="announce-shade"></div>
+    <div class="announce-content">
+      <span class="tag"><span class="tag-dot"></span> АНОНС / ИГРЫ</span>
+      <div class="announce-bottom">
+        <h2>{{ site.data.content.announcement_title | escape }}</h2>
+        <p>{{ site.data.content.announcement_description | escape }}</p>
+        <a href="{{ site.data.content.announcement_url | escape }}" target="_blank" rel="noopener noreferrer">ПОДРОБНЕЕ <span>↗</span></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="videos" class="video-section">
+  <div class="title-strip">
+    <div><span class="kicker">EVOODESSA / 02</span><h2>СВЕЖИЕ <em>ВИДЕО</em></h2><p>Видео на YouTube</p></div>
+    <a class="all-link" href="https://www.youtube.com/@evo_odessa/videos" target="_blank" rel="noopener noreferrer">ВСЕ ВИДЕО <span>↗</span></a>
+  </div>
+  <div class="video-grid">
+    {% for video in site.data.content.videos %}
+    <article class="video-card">
+      <div class="video-frame">
+        <div class="video-poster" aria-hidden="true" style="background-image:url('https://i.ytimg.com/vi/{{ video.id | escape }}/hqdefault.jpg')"></div>
+        <button class="video-play" type="button" data-youtube-id="{{ video.id | escape }}" data-video-title="{{ video.title | escape }}" aria-label="Воспроизвести: {{ video.title | escape }}">▶</button>
+      </div>
+      <h3>{{ video.title | escape }}</h3>
+      <div class="video-actions"><a href="https://www.youtube.com/watch?v={{ video.id | escape }}" target="_blank" rel="noopener noreferrer">Открыть на YouTube ↗</a></div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="news" class="news-section">
+  <div class="title-strip">
+    <div><span class="kicker">EVOODESSA / 03</span><h2>НОВОСТИ <em>И ПОСТЫ</em></h2><p>Новые публикации игрового сообщества</p></div>
+  </div>
+  {% assign published_posts = site.data.posts | where: 'published', true | sort: 'date' | reverse %}
+  {% if published_posts.size > 0 %}
+  <div class="news-grid">
+    {% for post in published_posts %}
+    <article class="news-card">
+      {% if post.image != null and post.image != '' %}
+      {% assign imagepath = post.image | remove_first: '/' %}
+      <img src="{{ imagepath | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+      {% endif %}
+      <div class="news-copy">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+        <h3>{{ post.title | escape }}</h3>
+        <div class="news-summary">{{ post.body | markdownify | strip_html | truncate: 170 }}</div>
+        <details><summary>ЧИТАТЬ ПОЛНОСТЬЮ ↗</summary><div class="news-body">{{ post.body | markdownify }}</div></details>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="news-empty">Скоро здесь появятся новости, анонсы и новые публикации EVOODESSA.</div>
+  {% endif %}
+</section>
+
+<section class="bottom-row">
+  <article class="small-panel">
+    <span class="kicker">EVOODESSA / 04</span><h2>ЗА КАДРОМ</h2>
+    <p>Игры, стримы, новые релизы и общение. Здесь начинается сообщество EVOODESSA.</p>
+    <a href="https://t.me/Evo_Odessa" target="_blank" rel="noopener noreferrer">НАШ TELEGRAM ↗</a>
+  </article>
+  <article class="small-panel">
+    <span class="kicker">EVOODESSA / 05</span><h2>СЛЕДУЮЩИЙ ЭФИР</h2>
+    <p>{{ site.data.content.schedule | escape }}</p>
+    <a href="https://www.youtube.com/@evo_odessa" target="_blank" rel="noopener noreferrer">YOUTUBE КАНАЛ ↗</a>
+  </article>
+</section>
+<footer>
+  <span>© EVOODESSA · {{ 'now' | date: '%Y' }}</span>
+  <span>СОЗДАНО ДЛЯ ИГРОВОГО СООБЩЕСТВА</span>
+  <a class="admin-link" href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer" title="Вход только для приглашённых редакторов">⚙ УПРАВЛЕНИЕ</a>
+</footer>
+</main></div>
+<script src="{{ '/app.js' | relative_url }}" defer></script>
+</body>
+</html>
