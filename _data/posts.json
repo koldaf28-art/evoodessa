@@ -1,8 +1,9 @@
 [
   {
     "title": "Добро пожаловать на EVOODESSA!",
-    "date": "2026-11-23",
-    "published": false,
-    "body": "Официальный сайт EVOODESSA открыт! Здесь будут появляться новости, анонсы и новые видео."
+    "date": "2026-11-24",
+    "published": true,
+    "image": "/assets/uploads/file000000005cb48210914175cb924af9f6-5.png",
+    "body": "Проаерка "
   }
 ]
