@@ -10,16 +10,15 @@
   "announcement_image": "/assets/uploads/file000000005cb48210914175cb924af9f6-4.png",
   "videos": [
     {
-      "id": "https://youtu.be/EXV7uTad5_w?is=2lYjQoa0n-lRf5uW",
-      "title": "Видео 1 · EVOODESSA"
-    },
-    {
-      "id": "JHEWZjPIxas",
+      "id": "https://youtu.be/L5Z4RlkAiN8?is=kjEqaJT8mO6XZ0S2",
       "title": "Видео 2 · EVOODESSA"
     },
     {
       "id": "Y1_P2MCj23Y",
       "title": "Видео 3 · EVOODESSA"
+    },
+    {
+      "id": "https://youtu.be/L5Z4RlkAiN8?is=kjEqaJT8mO6XZ0S2"
     }
   ]
 }
