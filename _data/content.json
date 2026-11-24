@@ -10,7 +10,7 @@
   "announcement_image": "/assets/uploads/file000000005cb48210914175cb924af9f6-4.png",
   "videos": [
     {
-      "id": "https://www.youtube.com/watch?v=L5Z4RlkAiN8",
+      "id": "L5Z4RlkAiN8",
       "title": "Видео 2 · EVOODESSA"
     },
     {
@@ -18,7 +18,7 @@
       "title": "Видео 3 · EVOODESSA"
     },
     {
-      "id": "https://youtu.be/L5Z4RlkAiN8?is=kjEqaJT8mO6XZ0S2"
+      "id": "L5Z4RlkAiN8"
     }
   ]
 }
